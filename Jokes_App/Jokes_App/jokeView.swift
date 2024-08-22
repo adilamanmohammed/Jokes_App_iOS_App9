@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct jokeView: View {
     
     @State private var jokeText = "Click Button"
     
@@ -81,5 +81,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    jokeView()
 }
