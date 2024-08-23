@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Joke : Decodable {
-    
-    
-    var joke : String
-    
+struct Joke: Decodable {
+    var joke: String
 }
+
+
+

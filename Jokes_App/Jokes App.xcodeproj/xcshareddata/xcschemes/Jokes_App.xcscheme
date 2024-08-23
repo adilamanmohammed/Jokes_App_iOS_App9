@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A5CF0A422C75772400791DB0"
-               BuildableName = "Jokes_App.app"
-               BlueprintName = "Jokes_App"
-               ReferencedContainer = "container:Jokes_App.xcodeproj">
+               BuildableName = "Jokes App.app"
+               BlueprintName = "Jokes App"
+               ReferencedContainer = "container:Jokes App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5CF0A422C75772400791DB0"
-            BuildableName = "Jokes_App.app"
-            BlueprintName = "Jokes_App"
-            ReferencedContainer = "container:Jokes_App.xcodeproj">
+            BuildableName = "Jokes App.app"
+            BlueprintName = "Jokes App"
+            ReferencedContainer = "container:Jokes App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -74,9 +74,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5CF0A422C75772400791DB0"
-            BuildableName = "Jokes_App.app"
-            BlueprintName = "Jokes_App"
-            ReferencedContainer = "container:Jokes_App.xcodeproj">
+            BuildableName = "Jokes App.app"
+            BlueprintName = "Jokes App"
+            ReferencedContainer = "container:Jokes App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

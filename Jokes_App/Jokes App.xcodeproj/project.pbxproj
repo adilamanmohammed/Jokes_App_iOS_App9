@@ -13,16 +13,20 @@
 		A5CF0A4E2C75772500791DB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF0A4D2C75772500791DB0 /* Preview Assets.xcassets */; };
 		A5D268812C76E22300CF1407 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D268802C76E22300CF1407 /* Joke.swift */; };
 		A5D268832C76E6E000CF1407 /* splashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D268822C76E6E000CF1407 /* splashScreenView.swift */; };
+		A5D268852C77EF7400CF1407 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D268842C77EF7400CF1407 /* homeView.swift */; };
+		A5D268892C7832E700CF1407 /* openingSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5D268882C7832E600CF1407 /* openingSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5CF0A432C75772400791DB0 /* Jokes_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CF0A432C75772400791DB0 /* Jokes App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jokes App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CF0A462C75772400791DB0 /* Jokes_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes_AppApp.swift; sourceTree = "<group>"; };
 		A5CF0A482C75772400791DB0 /* jokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokeView.swift; sourceTree = "<group>"; };
 		A5CF0A4A2C75772500791DB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CF0A4D2C75772500791DB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5D268802C76E22300CF1407 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		A5D268822C76E6E000CF1407 /* splashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashScreenView.swift; sourceTree = "<group>"; };
+		A5D268842C77EF7400CF1407 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
+		A5D268882C7832E600CF1407 /* openingSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = openingSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +51,7 @@
 		A5CF0A442C75772400791DB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5CF0A432C75772400791DB0 /* Jokes_App.app */,
+				A5CF0A432C75772400791DB0 /* Jokes App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +61,11 @@
 			children = (
 				A5CF0A462C75772400791DB0 /* Jokes_AppApp.swift */,
 				A5D268822C76E6E000CF1407 /* splashScreenView.swift */,
+				A5D268842C77EF7400CF1407 /* homeView.swift */,
 				A5CF0A482C75772400791DB0 /* jokeView.swift */,
 				A5D268802C76E22300CF1407 /* Joke.swift */,
 				A5CF0A4A2C75772500791DB0 /* Assets.xcassets */,
+				A5D268882C7832E600CF1407 /* openingSound.wav */,
 				A5CF0A4C2C75772500791DB0 /* Preview Content */,
 			);
 			path = Jokes_App;
@@ -76,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5CF0A422C75772400791DB0 /* Jokes_App */ = {
+		A5CF0A422C75772400791DB0 /* Jokes App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5CF0A512C75772500791DB0 /* Build configuration list for PBXNativeTarget "Jokes_App" */;
+			buildConfigurationList = A5CF0A512C75772500791DB0 /* Build configuration list for PBXNativeTarget "Jokes App" */;
 			buildPhases = (
 				A5CF0A3F2C75772400791DB0 /* Sources */,
 				A5CF0A402C75772400791DB0 /* Frameworks */,
@@ -88,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = Jokes_App;
+			name = "Jokes App";
 			productName = Jokes_App;
-			productReference = A5CF0A432C75772400791DB0 /* Jokes_App.app */;
+			productReference = A5CF0A432C75772400791DB0 /* Jokes App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5CF0A3E2C75772400791DB0 /* Build configuration list for PBXProject "Jokes_App" */;
+			buildConfigurationList = A5CF0A3E2C75772400791DB0 /* Build configuration list for PBXProject "Jokes App" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5CF0A422C75772400791DB0 /* Jokes_App */,
+				A5CF0A422C75772400791DB0 /* Jokes App */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D268892C7832E700CF1407 /* openingSound.wav in Resources */,
 				A5CF0A4E2C75772500791DB0 /* Preview Assets.xcassets in Resources */,
 				A5CF0A4B2C75772500791DB0 /* Assets.xcassets in Resources */,
 			);
@@ -146,6 +153,7 @@
 				A5CF0A492C75772400791DB0 /* jokeView.swift in Sources */,
 				A5CF0A472C75772400791DB0 /* Jokes_AppApp.swift in Sources */,
 				A5D268832C76E6E000CF1407 /* splashScreenView.swift in Sources */,
+				A5D268852C77EF7400CF1407 /* homeView.swift in Sources */,
 				A5D268812C76E22300CF1407 /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5CF0A3E2C75772400791DB0 /* Build configuration list for PBXProject "Jokes_App" */ = {
+		A5CF0A3E2C75772400791DB0 /* Build configuration list for PBXProject "Jokes App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5CF0A4F2C75772500791DB0 /* Debug */,
@@ -342,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5CF0A512C75772500791DB0 /* Build configuration list for PBXNativeTarget "Jokes_App" */ = {
+		A5CF0A512C75772500791DB0 /* Build configuration list for PBXNativeTarget "Jokes App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5CF0A522C75772500791DB0 /* Debug */,

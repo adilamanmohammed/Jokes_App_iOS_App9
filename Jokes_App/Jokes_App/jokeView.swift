@@ -6,80 +6,102 @@
 //
 
 import SwiftUI
+import UIKit  // Import UIKit to use haptic feedback
 
 struct jokeView: View {
     
-    @State private var jokeText = "Click Button"
+    var jokeType: String
+    
+    @State private var jokeText = "Loading joke..."
     
     var body: some View {
-        VStack {
-            Spacer()
+        ZStack {
+            Image("backGroundImage")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
             
-            Text(jokeText)
-            
-            Spacer()
-            
-            Button {
-                getJoke()
-            } label: {
-                Text("Get a Random Joke")
+            VStack {
+                Spacer()
+                
+                Text(jokeText)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxWidth: .infinity)  // Ensure the text takes up the full width available within the white box
+                    .fixedSize(horizontal: false, vertical: true)  // Prevent the text from expanding horizontally
+                
+                Spacer()
+                
+                Button {
+                    triggerHapticFeedback()  // Trigger haptic feedback on button press
+                    getJoke()
+                } label: {
+                    Text("Get Another Joke")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
-
+            .padding()
+            .frame(maxWidth: 300)  // Reduce the width of the outer VStack to a maximum of 300 points
+            .cornerRadius(15.0)
+            
         }
-        .padding()
+        .navigationTitle(jokeType + " Jokes")  // Keep the title
+        .navigationBarTitleDisplayMode(.inline)  // Set title display mode to inline
+        .toolbar {
+            ToolbarItem(placement: .principal) {  // Customize the title color
+                Text(jokeType + " Jokes")
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .bold()
+            }
+        }
+        .onAppear {
+            getJoke()
+        }
     }
-    
     
     func getJoke() {
-        
-        Task{
+        Task {
+            let urlString = "https://v2.jokeapi.dev/joke/\(jokeType)?type=single"
             
-            if let url = URL(string: "https://v2.jokeapi.dev/joke/Any?type=single"){
-                
-                
-                
-                do{
-                    
-                    
-                    // Making the API Call
-                    let (data, _) = try await URLSession.shared.data(from: url)
-                    
-                    // Parsing the JSON data
-                    let decoder = JSONDecoder()
-                    
-                    let joke = try decoder.decode(Joke.self, from: data)
-                    
-                    // Assign joke text to label
-                     jokeText = joke.joke
-                    
-                    
-                }
-                catch{
-                    
-                    
-                    print(error)
-                    
-                    
-                }
-                
-                
-                
-                
-                
+            guard let url = URL(string: urlString) else {
+                jokeText = "Invalid URL"
+                return
             }
             
-            
+            do {
+                let (data, response) = try await URLSession.shared.data(from: url)
+                
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                    jokeText = "Failed to load joke. Please try again."
+                    return
+                }
+                
+                let decoder = JSONDecoder()
+                let joke = try decoder.decode(Joke.self, from: data)
+                
+                jokeText = joke.joke
+                
+            } catch {
+                jokeText = "Failed to load joke. Please try again."
+                print("Error: \(error.localizedDescription)")
+            }
         }
-        
-        
-        
     }
     
-    
-    
-    
+    // Function to trigger haptic feedback
+    func triggerHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
 }
 
 #Preview {
-    jokeView()
+    jokeView(jokeType: "Programming")
 }
