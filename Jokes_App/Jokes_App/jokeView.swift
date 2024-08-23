@@ -32,6 +32,7 @@ struct jokeView: View {
                     .padding()
                     .frame(maxWidth: .infinity)  // Ensure the text takes up the full width available within the white box
                     .fixedSize(horizontal: false, vertical: true)  // Prevent the text from expanding horizontally
+                    .foregroundColor(.black)
                 
                 Spacer()
                 
