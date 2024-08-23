@@ -2,10 +2,6 @@
 
 Welcome to the **Jokes App (App 9)** repository! This project was developed as part of my iOS Networking module with CodeWithChris. The app fetches jokes from an API and displays them in a sleek, responsive interface built with SwiftUI.
 
-![Jokes App Screenshot 1](src/1.png)  
-![Jokes App Screenshot 2](src/2.png)  
-![Jokes App Screenshot 3](src/3.png)
-
 ## 📄 Overview
 
 **Jokes App** is a simple yet fun iOS application that showcases the following features:
